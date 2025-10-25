@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Voyzo – Viajes para todos los estilos y presupuestos</title>
-  <meta name="description" content="Encuentra viajes baratos, de lujo, familiares, mochileros y más. Reserva con confianza y apóyanos sin costo extra.">
+  <title>Voyzo – Viajes para todos: baratos, de lujo, familiares y más</title>
+  <meta name="description" content="Encuentra ofertas en vuelos, hoteles y paquetes para mochileros, familias, parejas y viajeros de lujo. Reserva con confianza y apóyanos sin costo extra.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -17,6 +16,7 @@
       font-family: 'Poppins', sans-serif;
       background: #f8fbff;
       color: #1a1a2e;
+      line-height: 1.6;
     }
     header {
       background: linear-gradient(135deg, #4a90e2, #5d78ff);
@@ -32,7 +32,7 @@
     }
     header p {
       font-size: 1.3rem;
-      max-width: 700px;
+      max-width: 800px;
       margin: 1rem auto;
       opacity: 0.95;
     }
@@ -58,7 +58,13 @@
       color: #2c3e50;
       text-align: center;
     }
-    .destinations {
+    .section p.center-text {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+    .destinations, .categories {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
@@ -110,6 +116,35 @@
     .btn:hover {
       background: #4a66e0;
     }
+    .faq-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-top: 1.2rem;
+    }
+    .faq-item h3 {
+      color: #2c3e50;
+      margin-bottom: 0.6rem;
+    }
+    form {
+      max-width: 600px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+    button.btn {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
     footer {
       background: #1a1a2e;
       color: #e2e2e2;
@@ -128,6 +163,7 @@
     @media (max-width: 600px) {
       header h1 { font-size: 2.2rem; }
       header p { font-size: 1.1rem; }
+      .section h2 { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -144,10 +180,10 @@
 
 <main>
 
+  <!-- Ofertas del Día -->
   <section class="section">
     <h2>✨ Ofertas del Día</h2>
     <div class="destinations">
-
       <div class="card">
         <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lisboa">
         <div class="card-content">
@@ -157,9 +193,8 @@
           <a href="https://www.booking.com?aid=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Ver oferta →</a>
         </div>
       </div>
-
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1551882427-ff3c7029b5ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Maldivas">
+        <img src="https://images.unsplash.com/photo-1613415403449-72a6d5c1a9a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Maldivas">
         <div class="card-content">
           <h3>Maldivas de Lujo</h3>
           <p>Villa sobre el agua, desayuno gourmet, spa incluido.</p>
@@ -167,7 +202,6 @@
           <a href="https://www.booking.com?aid=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Descubrir →</a>
         </div>
       </div>
-
       <div class="card">
         <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="México">
         <div class="card-content">
@@ -177,33 +211,140 @@
           <a href="https://www.expedia.com?ref=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Planear viaje →</a>
         </div>
       </div>
-
     </div>
   </section>
 
-  <section class="section">
-    <h2>📚 Guías que te inspiran</h2>
-    <div class="destinations">
+  <!-- Sobre Nosotros -->
+  <section class="section" style="text-align: center; max-width: 800px; margin: 3rem auto;">
+    <h2>¿Quiénes somos?</h2>
+    <p class="center-text">
+      Somos un equipo apasionado por los viajes. En <strong>Voyzo</strong>, 
+      probamos, comparamos y seleccionamos las mejores ofertas para que tú 
+      viajes más, gastes menos y vivas experiencias inolvidables.
+      <br><br>
+      ¡Cada reserva que haces nos ayuda a seguir creando contenido gratuito para ti!
+    </p>
+  </section>
 
+  <!-- Por tipo de viajero -->
+  <section class="section">
+    <h2>🧳 Viaja como tú eres</h2>
+    <div class="categories">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Japón">
+        <img src="https://images.unsplash.com/photo-1505238108481-5a7de7d5a8fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Familias">
         <div class="card-content">
-          <h3>Japón sin gastar de más</h3>
-          <p>Cómo viajar 2 semanas con $1200 USD (incluye JR Pass).</p>
-          <a href="#" class="btn">Leer guía</a>
+          <h3>Para familias</h3>
+          <p>Hoteles con piscina, habitaciones amplias y actividades para niños.</p>
+          <a href="https://www.booking.com/family?aid=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Ver opciones →</a>
         </div>
       </div>
-
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Europa">
+        <img src="https://images.unsplash.com/photo-1464360108311-763924f96863?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Parejas">
         <div class="card-content">
-          <h3>Europa en tren</h3>
-          <p>Ruta por 5 países con Eurail Pass: itinerario + tips.</p>
+          <h3>Para parejas</h3>
+          <p>Escapadas románticas, cenas privadas y vistas espectaculares.</p>
+          <a href="https://www.booking.com/romance?aid=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Romance →</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mochileros">
+        <div class="card-content">
+          <h3>Para mochileros</h3>
+          <p>Hostales económicos, tours grupales y transporte local.</p>
+          <a href="https://www.hostelworld.com?ref=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Aventura →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por presupuesto -->
+  <section class="section">
+    <h2>💰 Viaja según tu presupuesto</h2>
+    <div class="categories">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Económico">
+        <div class="card-content">
+          <h3>Menos de $300 USD</h3>
+          <p>Destinos cercanos, alojamientos básicos, vuelos low-cost.</p>
+          <a href="https://www.skyscanner.net?ref=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Buscar →</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551882427-ff3c7029b5ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Intermedio">
+        <div class="card-content">
+          <h3>$300 – $800 USD</h3>
+          <p>Equilibrio perfecto: comodidad, ubicación y experiencias.</p>
+          <a href="https://www.booking.com?aid=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Explorar →</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1476373887785-533959e4d71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lujo">
+        <div class="card-content">
+          <h3>Más de $800 USD</h3>
+          <p>Hoteles 5★, experiencias VIP, servicio personalizado.</p>
+          <a href="https://www.luxuryescapes.com?ref=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Lujo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guías -->
+  <section class="section">
+    <h2>📘 Guías que te inspiran</h2>
+    <div class="destinations">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1529255784085-7a2a3c5c8a52?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Viajar barato">
+        <div class="card-content">
+          <h3>10 formas de viajar barato en 2025</h3>
+          <p>Vuelos low-cost, alojamientos alternativos, apps que ahorran dinero.</p>
+          <a href="#" class="btn">Leer más</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Viajar con niños">
+        <div class="card-content">
+          <h3>Viajar con niños: Guía completa</h3>
+          <p>Desde el equipaje hasta los mejores hoteles familiares.</p>
+          <a href="#" class="btn">Ver guía</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Europa en tren">
+        <div class="card-content">
+          <h3>Europa en tren: Ruta de 10 días</h3>
+          <p>Itinerario ideal con Eurail Pass y consejos prácticos.</p>
           <a href="#" class="btn">Ver ruta</a>
         </div>
       </div>
-
     </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="max-width: 800px; margin: 0 auto;">
+    <h2 style="text-align: center;">Preguntas frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Pagaré más si uso sus enlaces?</h3>
+      <p>No. Los precios son exactamente los mismos. Nosotros ganamos una pequeña comisión del hotel o aerolínea, sin costo adicional para ti.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cómo eligen las ofertas?</h3>
+      <p>Combinamos datos en tiempo real, reseñas de usuarios y nuestra propia experiencia para mostrarte solo lo mejor en cada rango de precio.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Puedo contactarlos para un viaje personalizado?</h3>
+      <p>¡Sí! Aunque no somos agencia, podemos darte ideas y enlaces a expertos. Usa nuestro formulario de contacto.</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section">
+    <h2 style="text-align: center;">Contáctanos</h2>
+    <form action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" rows="4" required></textarea>
+      <button type="submit" class="btn">Enviar mensaje</button>
+    </form>
   </section>
 
 </main>
@@ -220,4 +361,3 @@
 
 </body>
 </html>
-```
