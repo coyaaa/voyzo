@@ -1,0 +1,223 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voyzo – Viajes para todos los estilos y presupuestos</title>
+  <meta name="description" content="Encuentra viajes baratos, de lujo, familiares, mochileros y más. Reserva con confianza y apóyanos sin costo extra.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8fbff;
+      color: #1a1a2e;
+    }
+    header {
+      background: linear-gradient(135deg, #4a90e2, #5d78ff);
+      color: white;
+      padding: 3rem 5%;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    header p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 1rem auto;
+      opacity: 0.95;
+    }
+    .tagline {
+      background: #fff8e1;
+      color: #5d4037;
+      padding: 12px;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2.5rem auto;
+      padding: 0 20px;
+    }
+    .section {
+      margin-bottom: 3.5rem;
+    }
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.8rem;
+      color: #2c3e50;
+      text-align: center;
+    }
+    .destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: all 0.35s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1.4rem;
+    }
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+      color: #4a90e2;
+    }
+    .price {
+      color: #e74c3c;
+      font-weight: 700;
+      margin: 0.4rem 0;
+    }
+    .luxury {
+      color: #d4af37;
+      font-weight: 700;
+    }
+    .btn {
+      display: inline-block;
+      background: #5d78ff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 12px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #4a66e0;
+    }
+    footer {
+      background: #1a1a2e;
+      color: #e2e2e2;
+      text-align: center;
+      padding: 2.5rem 20px;
+      margin-top: 4rem;
+    }
+    footer p {
+      margin: 0.6rem 0;
+      line-height: 1.6;
+    }
+    footer a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>✈️ Voyzo</h1>
+  <p>Viajes baratos, de lujo, familiares, mochileros… ¡Todo en un solo lugar!</p>
+</header>
+
+<div class="tagline">
+  🌍 Reserva con nuestros enlaces y apóyanos sin pagar un centavo extra.
+</div>
+
+<main>
+
+  <section class="section">
+    <h2>✨ Ofertas del Día</h2>
+    <div class="destinations">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lisboa">
+        <div class="card-content">
+          <h3>Lisboa desde $299</h3>
+          <p>Vuelo + hotel 4★, 5 noches. ¡Oferta relámpago!</p>
+          <div class="price">Desde $299 USD</div>
+          <a href="https://www.booking.com?aid=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Ver oferta →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551882427-ff3c7029b5ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Maldivas">
+        <div class="card-content">
+          <h3>Maldivas de Lujo</h3>
+          <p>Villa sobre el agua, desayuno gourmet, spa incluido.</p>
+          <div class="luxury">Experiencia premium</div>
+          <a href="https://www.booking.com?aid=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Descubrir →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="México">
+        <div class="card-content">
+          <h3>Ruta por México</h3>
+          <p>Ciudad de México, Oaxaca, Cancún – 10 días todo incluido.</p>
+          <div class="price">Desde $599 USD</div>
+          <a href="https://www.expedia.com?ref=TU_ID_AQUI" class="btn" target="_blank" rel="nofollow">Planear viaje →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>📚 Guías que te inspiran</h2>
+    <div class="destinations">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Japón">
+        <div class="card-content">
+          <h3>Japón sin gastar de más</h3>
+          <p>Cómo viajar 2 semanas con $1200 USD (incluye JR Pass).</p>
+          <a href="#" class="btn">Leer guía</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Europa">
+        <div class="card-content">
+          <h3>Europa en tren</h3>
+          <p>Ruta por 5 países con Eurail Pass: itinerario + tips.</p>
+          <a href="#" class="btn">Ver ruta</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>Voyzo</strong> – Viaja más, paga menos, vive mejor.</p>
+  <p>Este sitio contiene enlaces de afiliado. Si reservas a través de ellos, <strong>recibimos una comisión sin costo adicional para ti</strong>. ¡Gracias por hacer posible este proyecto!</p>
+  <p>
+    <a href="#">Política de privacidad</a> • 
+    <a href="#">Términos de uso</a> • 
+    <a href="#">Contacto</a>
+  </p>
+</footer>
+
+</body>
+</html>
+```
